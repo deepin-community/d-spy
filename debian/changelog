@@ -1,5 +1,27 @@
-template-repository (1.0-1) unstable; urgency=medium
+d-spy (1.9.0-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream release
+  * debian/control: Bump minimum glib, gtk4, and libadwaita
+  * Stop using debian/control.in and dh-sequence-gnome
+  * Drop invalid nocheck annotation for desktop-file-utils (Closes: #1063525)
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Fri, 09 Feb 2024 08:54:04 -0500
+
+d-spy (1.8.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/dspy-common.install: Install translations
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Mon, 18 Sep 2023 08:43:04 -0400
+
+d-spy (1.6.0-2) unstable; urgency=medium
+
+  * Release to unstable
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Fri, 26 May 2023 13:09:20 -0400
+
+d-spy (1.6.0-1) experimental; urgency=medium
+
+  * Initial release (Closes: #1036767)
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Thu, 25 May 2023 09:37:15 -0400
