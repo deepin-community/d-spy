@@ -1,3 +1,65 @@
+d-spy (48.0-3) unstable; urgency=medium
+
+  * Team upload
+  * Replace build-dep on obsolete appstream-util with appstream
+
+ -- Matthias Klumpp <mak@debian.org>  Sat, 03 May 2025 14:01:28 +0200
+
+d-spy (48.0-2) unstable; urgency=medium
+
+  * Add Build-Depends: libxml2-utils for xmllint
+  * Cherry-pick patch to allow window title to be translated
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Sun, 30 Mar 2025 13:36:14 -0400
+
+d-spy (48.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Mon, 17 Mar 2025 08:57:28 -0400
+
+d-spy (48~rc-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump minimum libadwaita
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Wed, 26 Feb 2025 14:47:53 -0500
+
+d-spy (48~beta-1) unstable; urgency=medium
+
+  * New upstream release
+  * library and development headers are no longer provided
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Tue, 04 Feb 2025 15:01:31 -0500
+
+d-spy (47.0-2) unstable; urgency=medium
+
+  * Opt into Salsa CI
+  * Add Provides: dspy
+  * Run wrap-and-sort
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Fri, 17 Jan 2025 10:15:31 -0500
+
+d-spy (47.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Mon, 16 Sep 2024 14:55:11 -0400
+
+d-spy (47~alpha-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump Standards Version to 4.7.0
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Fri, 09 Aug 2024 17:19:39 -0400
+
+d-spy (1.10.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update Homepage
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Wed, 27 Mar 2024 18:45:36 -0400
+
 d-spy (1.9.0-1) unstable; urgency=medium
 
   * New upstream release

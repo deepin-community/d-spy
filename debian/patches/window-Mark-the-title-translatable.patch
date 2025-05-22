@@ -1,0 +1,24 @@
+From: =?utf-8?b?QmFsbMOzIEd5w7ZyZ3k=?= <ballogyor@gmail.com>
+Date: Fri, 28 Mar 2025 14:30:41 +0000
+Subject: window: Mark the title translatable
+
+(cherry picked from commit 7cb2b7f822b56b92f33468b851fe88371f6c23d8)
+
+Origin: upstream, after 48.0
+---
+ src/dspy-window.ui | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/dspy-window.ui b/src/dspy-window.ui
+index 5a1f023..adb1b68 100644
+--- a/src/dspy-window.ui
++++ b/src/dspy-window.ui
+@@ -5,7 +5,7 @@
+   <template class="DspyWindow" parent="AdwApplicationWindow">
+     <property name="default_width">600</property>
+     <property name="default_height">300</property>
+-    <property name="title">D-Spy</property>
++    <property name="title" translatable="yes">D-Spy</property>
+     <child>
+       <object class="GtkShortcutController">
+         <child>
