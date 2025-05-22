@@ -4,7 +4,7 @@ Source: https://download.gnome.org/sources/d-spy/
 Upstream-Contact: Christian Hergert
 
 Files: *
-Copyright: 2019, 2021 Christian Hergert
+Copyright: 2019-2024 Christian Hergert
 License: GPL-3+
 
 Files: data/icons/*
@@ -16,14 +16,13 @@ Files: data/org.gnome.dspy.appdata*
 Copyright: 2021-2023 Christian Hergert
 License: CC0-1.0
 
-Files: lib/*
-Copyright:2015-2017, 2019, 2021 Christian Hergert
+Files: src/*
+Copyright: 2015-2017, 2019, 2021 Christian Hergert
 License: LGPL-3+
 
-Files: lib/dspy-binding-group.*
-Copyright: 2015 Christian Hergert
-           2015 Garrett Regier
-License: LGPL-2.1+
+Files: src/dspy-window.*
+Copyright: 2019 Christian Hergert
+License: GPL-3+
 
 License: CC0-1.0
  To the extent possible under law, the author(s) have dedicated all copyright
@@ -52,24 +51,6 @@ License: GPL-3+
  .
  On Debian systems, the complete text of the GNU General
  Public License can be found in `/usr/share/common-licenses/GPL-3'.
-
-License: LGPL-2.1+
- This file is free software; you can redistribute it and/or
- modify it under the terms of the GNU Lesser General Public
- License as published by the Free Software Foundation; either
- version 2.1 of the License, or (at your option) any later version.
- .
- This file is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- Lesser General Public License for more details.
- .
- You should have received a copy of the GNU Lesser General Public
- License along with this library; if not, write to the Free Software
- Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
- .
- On Debian systems, the complete text of the GNU Lesser General Public
- License version 2.1 can be found in "/usr/share/common-licenses/LGPL-2.1".
 
 License: LGPL-3+
  This package is free software; you can redistribute it and/or

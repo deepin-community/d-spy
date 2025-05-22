@@ -20,8 +20,9 @@
 
 #include "config.h"
 
-#include <adwaita.h>
 #include <glib/gi18n.h>
+
+#include <adwaita.h>
 
 #include "dspy-connection-button.h"
 #include "dspy-list-model-filter.h"
@@ -32,8 +33,6 @@
 #include "dspy-simple-popover.h"
 #include "dspy-tree-view.h"
 #include "dspy-view.h"
-
-#include "libdspy-resources.h"
 
 struct _DspyView
 {
@@ -64,6 +63,7 @@ typedef struct
   AdwNavigationSplitView  *paned;
   AdwNavigationPage       *bus_navigation_page;
   AdwToolbarView          *bus_toolbar_view;
+  AdwStatusPage           *status_page;
 
   guint                  destroyed : 1;
 } DspyViewPrivate;
@@ -149,15 +149,18 @@ connection_got_error_cb (DspyView       *self,
                          const GError   *error,
                          DspyConnection *connection)
 {
-  static GtkWidget *dialog;
+  AdwDialog *dialog;
   const gchar *title;
+  AdwApplicationWindow *window;
 
   g_assert (DSPY_IS_VIEW (self));
   g_assert (error != NULL);
   g_assert (DSPY_IS_CONNECTION (connection));
 
+  window  = ADW_APPLICATION_WINDOW (gtk_widget_get_root (GTK_WIDGET (self)));
+
   /* Only show one dialog at a time */
-  if (dialog != NULL)
+  if (adw_application_window_get_visible_dialog (window) != NULL)
     return;
 
   if (g_error_matches (error, G_DBUS_ERROR, G_DBUS_ERROR_ACCESS_DENIED))
@@ -171,15 +174,12 @@ connection_got_error_cb (DspyView       *self,
   else
     title = _("D-Bus Connection Failed");
 
-  dialog = gtk_message_dialog_new (GTK_WINDOW (gtk_widget_get_native (GTK_WIDGET (self))),
-                                   GTK_DIALOG_MODAL | GTK_DIALOG_USE_HEADER_BAR,
-                                   GTK_MESSAGE_WARNING,
-                                   GTK_BUTTONS_CLOSE,
-                                   "%s", title);
-  gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog), "%s", error->message);
-  g_signal_connect (dialog, "response", G_CALLBACK (gtk_window_destroy), NULL);
-  g_signal_connect_swapped (dialog, "response", G_CALLBACK (g_nullify_pointer), &dialog);
-  gtk_window_present (GTK_WINDOW (dialog));
+  dialog = adw_alert_dialog_new (title, error->message);
+  adw_alert_dialog_add_response (ADW_ALERT_DIALOG (dialog),
+                                 "close",  _("_Close"));
+  adw_alert_dialog_set_default_response (ADW_ALERT_DIALOG (dialog), "close");
+  adw_alert_dialog_set_close_response (ADW_ALERT_DIALOG (dialog), "close");
+  adw_dialog_present (dialog, GTK_WIDGET (window));
 }
 
 static void
@@ -512,6 +512,8 @@ dspy_view_constructed (GObject *object)
   gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (priv->session_button), TRUE);
 
   G_OBJECT_CLASS (dspy_view_parent_class)->constructed (object);
+
+  adw_status_page_set_icon_name (priv->status_page, APP_ID "-symbolic");
 }
 
 static void
@@ -564,10 +566,12 @@ dspy_view_class_init (DspyViewClass *klass)
   gtk_widget_class_bind_template_child_private (widget_class, DspyView, paned);
   gtk_widget_class_bind_template_child_private (widget_class, DspyView, bus_navigation_page);
   gtk_widget_class_bind_template_child_private (widget_class, DspyView, bus_toolbar_view);
+  gtk_widget_class_bind_template_child_private (widget_class, DspyView, status_page);
 
   gtk_widget_class_set_layout_manager_type (widget_class, GTK_TYPE_BIN_LAYOUT);
 
   g_type_ensure (ADW_TYPE_STATUS_PAGE);
+  g_type_ensure (DSPY_TYPE_CONNECTION_BUTTON);
   g_type_ensure (DSPY_TYPE_METHOD_VIEW);
   g_type_ensure (DSPY_TYPE_NAME_MARQUEE);
   g_type_ensure (DSPY_TYPE_TREE_VIEW);

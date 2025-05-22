@@ -1,26 +1,26 @@
-# Dutch translation for d-spy.
-# Copyright (C) 2023 d-spy's COPYRIGHT HOLDER
+# British English translation for d-spy.
+# Copyright (C) 2024 d-spy's COPYRIGHT HOLDER
 # This file is distributed under the same license as the d-spy package.
-# Nathan Follens <nfollens@gnome.org>, 2023-2024.
+# Andi Chandler <andi@gowling.com>, 2024.
+# Bruce Cowan <bruce@bcowan.me.uk>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: d-spy main\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/d-spy/issues\n"
-"POT-Creation-Date: 2024-07-29 20:48+0000\n"
-"PO-Revision-Date: 2024-10-28 01:24+0100\n"
-"Last-Translator: Nathan Follens <nfollens@gnome.org>\n"
-"Language-Team: GNOME-NL https://matrix.to/#/#nl:gnome.org\n"
-"Language: nl\n"
+"POT-Creation-Date: 2024-05-19 11:42+0000\n"
+"PO-Revision-Date: 2024-05-23 12:29+0100\n"
+"Last-Translator: Bruce Cowan <bruce@bcowan.me.uk>\n"
+"Language-Team: English - United Kingdom <en@li.org>\n"
+"Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Gtranslator 46.1\n"
 
 #. developer_name tag deprecated with Appstream 1.0
 #: data/org.gnome.dspy.appdata.xml.in.in:7
-#| msgid "Christian Hergert, et al."
 msgid "Christian Hergert"
 msgstr "Christian Hergert"
 
@@ -31,22 +31,21 @@ msgstr "D-Spy"
 
 #: data/org.gnome.dspy.appdata.xml.in.in:16
 msgid "Analyze D-Bus connections"
-msgstr "Analyseer D-Bus-verbindingen"
+msgstr "Analyse D-Bus connections"
 
 #: data/org.gnome.dspy.appdata.xml.in.in:18
 msgid "D-Spy is a simple tool to explore D-Bus connections."
-msgstr "D-Spy is een eenvoudig hulpmiddel om D-Bus-verbindingen te verkennen."
+msgstr "D-Spy is a simple tool to explore D-Bus connections."
 
 #: data/org.gnome.dspy.appdata.xml.in.in:29
 msgid "D-Spy Interface"
-msgstr "D-Spy-interface"
+msgstr "D-Spy Interface"
 
 #: data/org.gnome.dspy.desktop.in.in:7
 msgid "Discover and explore D-Bus services"
-msgstr "Ontdek en verken D-Bus-diensten"
+msgstr "Discover and explore D-Bus services"
 
 #: data/org.gnome.dspy.desktop.in.in:8
-#| msgid "dbus;"
 msgid "dspy;dbus;"
 msgstr "dspy;dbus;"
 
@@ -54,31 +53,31 @@ msgstr "dspy;dbus;"
 #: lib/dspy-connection-button.c:76
 #, c-format
 msgid "Connected to “%s”"
-msgstr "Verbonden met ‘%s’"
+msgstr "Connected to “%s”"
 
 #: lib/dspy-connection-button.c:221
 msgid "S_ystem"
-msgstr "S_ysteem"
+msgstr "S_ystem"
 
 #: lib/dspy-connection-button.c:223
 msgid "_Session"
-msgstr "_Sessie"
+msgstr "_Session"
 
 #: lib/dspy-connection-button.c:225
 msgid "_Other"
-msgstr "_Overig"
+msgstr "_Other"
 
 #: lib/dspy-method-view.c:191
 msgid "Execute"
-msgstr "Uitvoeren"
+msgstr "Execute"
 
 #: lib/dspy-method-view.c:273
 msgid "Cancel"
-msgstr "Annuleren"
+msgstr "Cancel"
 
 #: lib/dspy-method-view.ui:11 lib/dspy-tree-view.c:343
 msgid "Object Path"
-msgstr "Objectpad"
+msgstr "Object Path"
 
 #: lib/dspy-method-view.ui:36
 msgid "Interface"
@@ -86,7 +85,7 @@ msgstr "Interface"
 
 #: lib/dspy-method-view.ui:61
 msgid "Method"
-msgstr "Methode"
+msgstr "Method"
 
 #: lib/dspy-method-view.ui:86
 msgid "Parameters"
@@ -94,35 +93,35 @@ msgstr "Parameters"
 
 #: lib/dspy-method-view.ui:126
 msgid "_Execute"
-msgstr "Uitvoer_en"
+msgstr "_Execute"
 
 #: lib/dspy-method-view.ui:141
 msgid "Result"
-msgstr "Resultaat"
+msgstr "Result"
 
 #: lib/dspy-method-view.ui:182
 msgid "_Copy"
-msgstr "_Kopiëren"
+msgstr "_Copy"
 
 #: lib/dspy-method-view.ui:194
 msgid "Elapsed Time"
-msgstr "Verlopen tijd"
+msgstr "Elapsed Time"
 
 #: lib/dspy-name-marquee.ui:12
 msgid "Bus Address"
-msgstr "Busadres"
+msgstr "Bus Address"
 
 #: lib/dspy-name-marquee.ui:36
 msgid "Name"
-msgstr "Naam"
+msgstr "Name"
 
 #: lib/dspy-name-marquee.ui:60
 msgid "Owner"
-msgstr "Eigenaar"
+msgstr "Owner"
 
 #: lib/dspy-name-marquee.ui:84
 msgid "Process ID"
-msgstr "Proces-ID"
+msgstr "Process ID"
 
 #: lib/dspy-name-row.c:78 lib/dspy-name-row.c:80
 #, c-format
@@ -131,15 +130,15 @@ msgstr "%s: %s"
 
 #: lib/dspy-name-row.c:78 lib/dspy-name-row.c:80
 msgid "Activatable"
-msgstr "Activeerbaar"
+msgstr "Activatable"
 
 #: lib/dspy-name-row.c:78
 msgid "Yes"
-msgstr "Ja"
+msgstr "Yes"
 
 #: lib/dspy-name-row.c:80
 msgid "No"
-msgstr "Nee"
+msgstr "No"
 
 #: lib/dspy-name-row.c:85
 #, c-format
@@ -152,15 +151,15 @@ msgstr "PID"
 
 #: lib/dspy-node.c:468
 msgid "read/write"
-msgstr "lezen/schrijven"
+msgstr "read/write"
 
 #: lib/dspy-node.c:470
 msgid "write-only"
-msgstr "alleen-schrijven"
+msgstr "write-only"
 
 #: lib/dspy-node.c:472
 msgid "read-only"
-msgstr "alleen-lezen"
+msgstr "read-only"
 
 #: lib/dspy-node.c:587
 msgid "Interfaces"
@@ -168,93 +167,90 @@ msgstr "Interfaces"
 
 #: lib/dspy-node.c:590
 msgid "Methods"
-msgstr "Methodes"
+msgstr "Methods"
 
 #: lib/dspy-node.c:596
 msgid "Properties"
-msgstr "Eigenschappen"
+msgstr "Properties"
 
 #: lib/dspy-node.c:612
 msgid "Signals"
-msgstr "Signalen"
+msgstr "Signals"
 
 #. translators: %s is replaced with the simple D-Bus type string
 #: lib/dspy-signature.c:77
 #, c-format
 msgid "Array of [%s]"
-msgstr "Array van [%s]"
+msgstr "Array of [%s]"
 
-#: lib/dspy-view.c:126
+#: lib/dspy-view.c:125
 msgid "Bus"
 msgstr "Bus"
 
-#: lib/dspy-view.c:165
+#: lib/dspy-view.c:164
 msgid "Access Denied by Peer"
-msgstr "Toegang geweigerd door peer"
+msgstr "Access Denied by Peer"
 
-#: lib/dspy-view.c:167
+#: lib/dspy-view.c:166
 msgid "Authentication Failed"
-msgstr "Aanmelding mislukt"
+msgstr "Authentication Failed"
 
-#: lib/dspy-view.c:169
+#: lib/dspy-view.c:168
 msgid "Operation Timed Out"
-msgstr "Time-out bij bewerking"
+msgstr "Operation Timed Out"
 
-#: lib/dspy-view.c:171
+#: lib/dspy-view.c:170
 msgid "Lost Connection to Bus"
-msgstr "Verbinding met bus verbroken"
+msgstr "Lost Connection to Bus"
 
-#: lib/dspy-view.c:173
+#: lib/dspy-view.c:172
 msgid "D-Bus Connection Failed"
-msgstr "Verbinding met D-Bus is mislukt"
+msgstr "D-Bus Connection Failed"
+
+#: lib/dspy-view.c:474
+msgid "Connect"
+msgstr "Connect"
 
 #: lib/dspy-view.c:475
-msgid "Connect"
-msgstr "Verbinden"
-
-#: lib/dspy-view.c:476
 msgid "Provide the address of the message bus"
-msgstr "Voer het adres van de berichtenbus is"
+msgstr "Provide the address of the message bus"
 
-#: lib/dspy-view.c:478
+#: lib/dspy-view.c:477
 msgid "Connect to Other Bus"
-msgstr "Verbinden met andere bus"
+msgstr "Connect to Other Bus"
 
 #: lib/dspy-view.ui:31
 msgid "Main Menu"
-msgstr "Hoofdmenu"
+msgstr "Main Menu"
 
 #: lib/dspy-view.ui:66
 msgid "Search Bus Names"
-msgstr "Busnamen zoeken"
+msgstr "Search Bus Names"
 
 #: lib/dspy-view.ui:80
 msgid "Bus Names"
-msgstr "Busnamen"
-
-#: lib/dspy-view.ui:143
-msgid "Select a D-Bus Name"
-msgstr "Selecteer een D-Bus-naam"
+msgstr "Bus Names"
 
 #: lib/dspy-view.ui:144
+msgid "Select a D-Bus Name"
+msgstr "Select a D-Bus Name"
+
+#: lib/dspy-view.ui:145
 msgid "Select a bus name to introspect the peer"
-msgstr "Selecteer een busnaam om de peer te introspecteren"
+msgstr "Select a bus name to introspect the peer"
 
-#: lib/dspy-view.ui:160
+#: lib/dspy-view.ui:161
 msgid "Refresh"
-msgstr "Vernieuwen"
+msgstr "Refresh"
 
-#: lib/dspy-view.ui:230
+#: lib/dspy-view.ui:231
 msgid "_New Window"
-msgstr "_Nieuw venster"
+msgstr "_New Window"
 
-#: lib/dspy-view.ui:236
+#: lib/dspy-view.ui:237
 msgid "_About D-Spy"
-msgstr "_Over D-Spy"
+msgstr "_About D-Spy"
 
 #: lib/gtk/menus.ui:5
 msgid "Connect to Other Bus…"
-msgstr "Verbinden met andere bus…"
-
-#~ msgid "A D-Bus explorer for GNOME"
-#~ msgstr "Een D-Bus-verkenner voor GNOME"
+msgstr "Connect to Other Bus…"

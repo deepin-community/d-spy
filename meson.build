@@ -1,28 +1,32 @@
 project('d-spy', 'c',
-        version: '1.9.0',
-  meson_version: '>= 0.59.0',
+        version: '48.0',
+  meson_version: '>= 1.0',
 )
 
-symbolic_version = '45.0'
-
-version_split = meson.project_version().split('.')
-version_major = version_split[0]
-version_minor = version_split[1]
-version_micro = version_split[2]
+api_version_major = 1
+api_version_minor = 12
+api_version_micro = 0
 
 gnome = import('gnome')
 i18n = import('i18n')
 cc = meson.get_compiler('c')
 buildtype = get_option('buildtype')
 
-if get_option('development')
-  app_id = 'org.gnome.dspy.devel'
+if not get_option('builder')
+  if get_option('development')
+    app_id = 'org.gnome.dspy.devel'
+  else
+    app_id = 'org.gnome.dspy'
+  endif
 else
-  app_id = 'org.gnome.dspy'
+  if get_option('development')
+    app_id = 'org.gnome.Builder.Devel.dspy'
+  else
+    app_id = 'org.gnome.Builder.dspy'
+  endif
 endif
 
 config_h = configuration_data()
-config_h.set_quoted('SYMBOLIC_VERSION', symbolic_version)
 config_h.set_quoted('PACKAGE_VERSION', meson.project_version())
 config_h.set_quoted('PACKAGE_ICON_NAME', app_id)
 config_h.set_quoted('GETTEXT_PACKAGE', 'd-spy')
@@ -33,7 +37,7 @@ config_h.set10('DEVELOPMENT_BUILD', get_option('development'))
 
 glib_req_version = '2.76'
 gtk_req_version = '4.12'
-adwaita_req_version = '1.4'
+adwaita_req_version = '1.5'
 
 glib_req = '>= @0@'.format(glib_req_version)
 gtk_req = '>= @0@'.format(gtk_req_version)
@@ -180,7 +184,6 @@ configure_file(
 root_include_directory = include_directories('.')
 
 subdir('data')
-subdir('lib')
 subdir('src')
 subdir('po')
 
